@@ -44,12 +44,12 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
-            if (customer.Id == 0)
+            if (customer.Id == 0) //it's a new customer
             {
                 _context.Customers.Add(customer);
             }
 
-            else
+            else //we're editing an existing customer
             {
                 var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
                 customerInDb.Name = customer.Name;
