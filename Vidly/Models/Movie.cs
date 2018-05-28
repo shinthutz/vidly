@@ -12,7 +12,8 @@ namespace Vidly.Models
 
         [Required]
         [StringLength(255)]
-        public String Name { get; set; }        
+        public String Name { get; set; }   
+        
         public Genre Genre { get; set; }
 
         public int GenreId { get; set; }
