@@ -92,7 +92,7 @@ namespace Vidly.Controllers
                 Genres = _context.Genres.ToList()
             };
 
-            return View("MoviesForm", viewModel);
+            return View("MovieForm", viewModel);
         }
 
         // GET: Movies/Random
